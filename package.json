@@ -1,0 +1,42 @@
+{
+  "name": "wmr-preact-tailwind-starter",
+  "scripts": {
+    "start": "npm-run-all --parallel postcssWatch wmr",
+    "build": "NODE_ENV=production npm-run-all postcss wmrBuild",
+    "serve": "wmr serve",
+    "wmr": "wmr",
+    "wmrBuild": "wmr build --prerender",
+    "postcss": "postcss public/tailwind.css -o public/style.css",
+    "postcssWatch": "postcss public/tailwind.css -o public/style.css --watch --verbose"
+  },
+  "eslintConfig": {
+    "extends": "preact"
+  },
+  "alias": {
+    "react": "preact/compat",
+    "react-dom": "preact/compat"
+  },
+  "dependencies": {
+    "preact": "10.5.13",
+    "preact-iso": "2.0.2",
+    "preact-render-to-string": "5.1.19"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
+    "autoprefixer": "~10.2.6",
+    "eslint": "^7.3.0",
+    "eslint-config-preact": "1.1.4",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-compat": "~3.9.0",
+    "eslint-plugin-jest": "~23.20.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "~7.24.0",
+    "eslint-plugin-react-hooks": "~4.2.0",
+    "npm-run-all": "~4.1.5",
+    "postcss": "~8.3.0",
+    "postcss-cli": "~8.3.1",
+    "tailwindcss": "~2.1.2",
+    "wmr": "2.2.0"
+  }
+}
